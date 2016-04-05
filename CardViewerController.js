@@ -5,7 +5,6 @@
         
         // Use $j rather than $ to avoid jQuery conflicts
         if (typeof jQuery !== "undefined" && typeof $j === "undefined") {
-            $j = jQuery.noConflict(true);
         }
         
         // hack to update CSS for page background color when being used in S1
@@ -133,7 +132,7 @@
       var selectedItem = event.currentTarget;
       var selectedId = selectedItem.dataset.ideaid;
 
-      var evt = $A.get("e.jmb:OpenIdea");
+      var evt = $A.get("e.c:OpenIdea");
        evt.setParams({
         "currentIdeaId": selectedId
        });
